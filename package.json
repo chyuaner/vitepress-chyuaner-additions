@@ -1,0 +1,29 @@
+{
+  "name": "vitepress-chyuaner-additions",
+  "version": "1.0.0",
+  "description": "以原版VitePress 2.0為基礎，有額外做一些動畫效果、Sidebar擴充等通用性質的添加處理",
+  "keywords": [
+    "vitepress",
+    "theme"
+  ],
+  "homepage": "https://github.com/chyuaner/vitepress-chyuaner-additions#readme",
+  "bugs": {
+    "url": "https://github.com/chyuaner/vitepress-chyuaner-additions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chyuaner/vitepress-chyuaner-additions.git"
+  },
+  "license": "MIT",
+  "author": "Yuan Chiu",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
