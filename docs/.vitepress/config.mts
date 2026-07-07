@@ -13,24 +13,39 @@ export default defineConfig({
     ],
 
     sidebar: [
+      { text: '簡介', link: '/intro' },
       {
+        text: 'Packages',
         items: [
-          { text: '簡介', link: '/intro' },
           { text: 'vitepress-page-transitions', link: '/vitepress-page-transitions' },
           { text: 'vitepress-sidebar-anchor', link: '/vitepress-sidebar-anchor' },
         ]
       },
       {
-        text: 'VitePress 測試用範例',
+        text: '測試用範例',
         items: [
-          { text: 'Markdown Examples', link: '/examples/markdown-examples' },
+          {
+            text: 'Markdown Examples', link: '/examples/markdown-examples',
+            items: [
+              { text: 'Syntax Highlighting', link: '/examples/markdown-examples#syntax-highlighting' },
+              { text: 'Custom Containers', link: '/examples/markdown-examples#custom-containers' },
+              { text: 'More', link: '/examples/markdown-examples#more' },
+
+            ]
+          },
           { text: 'Runtime API Examples', link: '/examples/api-examples' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/chyuaner/vitepress-chyuaner-additions' }
+    ],
+
+    lastUpdated: true,
+
+    outline: {
+      label: '目錄'
+    },
   }
 })
