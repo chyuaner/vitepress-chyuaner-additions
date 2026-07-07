@@ -5,6 +5,14 @@ export default defineConfig({
   title: "元兒～的VitePress添加包",
   description: "以原版VitePress 2.0為基礎，有額外做一些動畫效果、Sidebar擴充等通用性質的添加處理",
   themeConfig: {
+
+    // 通用部分
+    lastUpdated: true,
+
+    outline: {
+      label: '目錄'
+    },
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -35,17 +43,21 @@ export default defineConfig({
           },
           { text: 'Runtime API Examples', link: '/examples/api-examples' }
         ]
-      }
+      },
+
+      {
+        text: 'VitePress常用Tips',
+        items: [
+          { text: 'Config', link: '/tips/config' },
+          { text: 'Markdown語法', link: '/tips/markdown' },
+          { text: 'Github Actions', link: '/tips/gh-actions' },
+        ]
+      },
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/chyuaner/vitepress-chyuaner-additions' }
     ],
 
-    lastUpdated: true,
-
-    outline: {
-      label: '目錄'
-    },
   }
 })
