@@ -8,15 +8,23 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '使用說明', link: '/intro', activeMatch: '^/(?!examples/|$)'  },
+      { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '簡介', link: '/intro' },
+          { text: 'vitepress-page-transitions', link: '/vitepress-page-transitions' },
+          { text: 'vitepress-sidebar-anchor', link: '/vitepress-sidebar-anchor' },
+        ]
+      },
+      {
+        text: 'VitePress 測試用範例',
+        items: [
+          { text: 'Markdown Examples', link: '/examples/markdown-examples' },
+          { text: 'Runtime API Examples', link: '/examples/api-examples' }
         ]
       }
     ],
