@@ -21,6 +21,9 @@
   "directories": {
     "doc": "docs"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "npm run docs:dev",
     "build": "npm run docs:build",
@@ -28,6 +31,10 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "vitepress-page-transitions": "*",
+    "vitepress-sidebar-anchor": "*"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"

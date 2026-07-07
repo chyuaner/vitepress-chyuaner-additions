@@ -1,0 +1,10 @@
+/* 本站自訂樣式額外放置處 */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}

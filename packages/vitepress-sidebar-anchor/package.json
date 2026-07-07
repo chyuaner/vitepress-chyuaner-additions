@@ -1,0 +1,18 @@
+{
+  "name": "vitepress-sidebar-anchor",
+  "version": "1.0.0",
+  "description": "Active sidebar heading tracking using IntersectionObserver for VitePress.",
+  "type": "module",
+  "main": "./index.js",
+  "keywords": [
+    "vitepress",
+    "sidebar",
+    "scroll-spy"
+  ],
+  "author": "Yuan Chiu",
+  "license": "MIT",
+  "peerDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.0.0"
+  }
+}

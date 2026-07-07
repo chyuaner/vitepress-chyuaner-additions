@@ -1,0 +1,22 @@
+{
+  "name": "vitepress-page-transitions",
+  "version": "1.0.0",
+  "description": "View Transitions animations for VitePress routes and dark mode toggle.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./style.css": "./style.css"
+  },
+  "keywords": [
+    "vitepress",
+    "view-transitions",
+    "animation"
+  ],
+  "author": "Yuan Chiu",
+  "license": "MIT",
+  "peerDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.0.0"
+  }
+}

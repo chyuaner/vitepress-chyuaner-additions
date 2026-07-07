@@ -1,0 +1,112 @@
+/* Disable default cross-fade for root to keep header and sidebar static */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+.VPNavBar {
+  view-transition-name: vp-nav-bar;
+}
+
+::view-transition-group(vp-nav-bar) {
+  z-index: 100;
+}
+
+::view-transition-old(vp-nav-bar),
+::view-transition-new(vp-nav-bar) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+#VPContent {
+  view-transition-name: vp-content;
+}
+
+::view-transition-old(vp-content) {
+  animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) both fade-out,
+             0.6s cubic-bezier(0.4, 0, 0.2, 1) both slide-down;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(vp-content) {
+  animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) both fade-in,
+             0.6s cubic-bezier(0.4, 0, 0.2, 1) both slide-up;
+  mix-blend-mode: normal;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-down {
+  from { transform: translateY(0); }
+  to { transform: translateY(20px); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
+}
+
+.VPSidebar {
+  view-transition-name: vp-sidebar;
+}
+
+::view-transition-old(vp-sidebar) {
+  animation: 0.6s ease both fade-out;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(vp-sidebar) {
+  animation: 0.6s ease both fade-in;
+  mix-blend-mode: normal;
+}
+
+.transition-sidebar-enter::view-transition-new(vp-sidebar) {
+  animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) both slide-in-left;
+}
+
+.transition-sidebar-leave::view-transition-old(vp-sidebar) {
+  animation: 0.6s cubic-bezier(0.4, 0, 0.2, 1) both slide-out-left;
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-out-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+::view-transition-old(root),
+.dark::view-transition-new(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root),
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+
+.theme-appearance-transition #VPContent,
+.theme-appearance-transition .VPSidebar,
+.theme-appearance-transition .VPNavBar {
+  view-transition-name: none !important;
+}
